@@ -6,6 +6,7 @@ const cors = require("cors");
 
 app.use(cors());
 app.post("/recurring-rent", (req, res) => {
+  res.setTimeout(200);
   const fetchData = async () => {
     await axios
       .post("https://surewin-backend.onrender.com/recurring-rent")
