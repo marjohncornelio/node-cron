@@ -16,6 +16,9 @@ cron.schedule("0 0 * * * *", () => {
   };
   fetchData();
 });
+app.get("/", (req, res) => {
+  res.status(200).json({ success: true, msg: "Success" });
+});
 
 const port = process.env.PORT || 5000;
 app.listen(port, console.log("Server listening on port " + port));
