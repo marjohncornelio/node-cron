@@ -11,10 +11,10 @@ app.post("/recurring-rent", (req, res) => {
       await axios
         .post("https://surewin-backend.onrender.com/recurring-rent")
         .then((res) => {
-          res.status(200).json({ success: true, mgs: "success" });
+          res.send(200).json({ success: true, mgs: "success" });
         })
         .catch((error) => {
-          res.status(400).json({ success: false, mgs: "something  went" });
+          res.send(400).json({ success: false, mgs: "something  went" });
         });
     };
     fetchData();
