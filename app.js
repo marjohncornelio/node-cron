@@ -3,7 +3,7 @@ const app = express();
 const cron = require("node-cron");
 const axios = require("axios");
 
-cron.schedule("0 0 * * * *", () => {
+cron.schedule("0 0 0 * * *", () => {
   const fetchData = async () => {
     await axios
       .post("https://surewin-backend.onrender.com/recurring-rent")
